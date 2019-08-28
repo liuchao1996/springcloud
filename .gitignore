@@ -7,4 +7,5 @@
 *.txlcn
 logs
 LOG_HOME_IS_UNDEFINED/
-
+!.mvn/wrapper/maven-wrapper.jar
+/eureka_server/.mvn/
