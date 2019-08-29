@@ -41,7 +41,7 @@ public class ProductController {
     @RequestMapping("find")
     public Object findById(@RequestParam("id") int id) throws InterruptedException {
 
-        TimeUnit.SECONDS.sleep(1);
+        //TimeUnit.SECONDS.sleep(1);
 
         Product product = productService.findById(id);
         Product result = new Product();

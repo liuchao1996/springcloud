@@ -5,12 +5,12 @@ eureka:
   instance:
     hostname: localhost
   client:
-    #ÊÇ·ñÒª½«×ÔÉíµÄÊµÀıĞÅÏ¢×¢²áµ½ Eureka ·şÎñ¶Ë
+    #æ˜¯å¦è¦å°†è‡ªèº«çš„å®ä¾‹ä¿¡æ¯æ³¨å†Œåˆ° Eureka æœåŠ¡ç«¯
     registerWithEureka: false
-    #ÊÇ·ñ´Ó Eureka ·şÎñ¶Ë»ñÈ¡×¢²áĞÅÏ¢£¬×¢²á±í
+    #æ˜¯å¦ä» Eureka æœåŠ¡ç«¯è·å–æ³¨å†Œä¿¡æ¯ï¼Œæ³¨å†Œè¡¨
     fetchRegistry: false
     serviceUrl:
       defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
-      #¹Ø±Õ×ÔÎÒ±£»¤»úÖÆ
+      #å…³é—­è‡ªæˆ‘ä¿æŠ¤æœºåˆ¶
 #  server:
 #    enable-self-preservation: false
