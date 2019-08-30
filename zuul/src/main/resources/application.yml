@@ -1,0 +1,22 @@
+server:
+  port: 9000
+
+#服务的名称
+spring:
+  application:
+    name: zuul
+
+#指定注册中心地址
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+#自定义路由转发 /order-service/api/v1/order/save?user_id=1&product_id=2  order-service使用 /apigateway/**  代替
+zuul:
+  routes:
+    order-service: /apigateway/**
+    product-service: /apigateway/**
+  #忽略服务，就不能通过zuul去访问服务
+  #ignored-services: product-service
+  #过滤服务 /*是-之前的 /order-service   /** 是后面的所有路径
+  ignored-patterns: /*-service/**
