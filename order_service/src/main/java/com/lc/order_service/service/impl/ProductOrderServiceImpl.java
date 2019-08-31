@@ -5,6 +5,8 @@ import com.lc.order_service.domain.ProductOrder;
 import com.lc.order_service.service.FeignProductClient;
 import com.lc.order_service.service.ProductOrderService;
 import com.lc.order_service.utils.JsonUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
@@ -16,6 +18,7 @@ import java.util.UUID;
 @Service
 public class ProductOrderServiceImpl implements ProductOrderService {
 
+    private final Logger logger = LoggerFactory.getLogger(getClass());
 
     @Autowired
     private RestTemplate restTemplate;
