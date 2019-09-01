@@ -1,0 +1,17 @@
+#服务的名称
+spring:
+  application:
+    name: order-service
+  #指定从哪个配置中心读取
+  cloud:
+    config:
+      discovery:
+        service-id: config-server
+        enabled: true
+      profile: test
+      #建议用label去区分环境，默认是label是master分支
+      label: master
+      #指定用哪些配置,可以逗号分隔写多个配置文件
+      name: client-eureka,order-service
+      #使用config的地址
+      #uri: http://localhost:9100
