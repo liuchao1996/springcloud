@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/liuchao1996/config-respo
+          #username: 794666918@qq.com
+          #password: xdclass.net123
+          #超时时间
+          timeout: 5
+          #分支
+          default-label: master
+
+server:
+  port: 9100
+
+#指定注册中心地址
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
